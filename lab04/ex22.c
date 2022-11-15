@@ -2,7 +2,9 @@
 
 int main()
 {
-    int num1, num2, p1, p2, unidade, dezena, centena, milhar, dmilhar, cmilhar;
+    int num1, num2, p1, p2, mp, mn1, mn2, unidade, dezena, centena, milhar, dmilhar, cmilhar;
+
+    mp = 0;
 
     for (num1=999; num1>=100; num1--){
         for (num2=999; num2>=100; num2--){
@@ -17,11 +19,15 @@ int main()
             
             p2 = unidade + dezena + centena + milhar + dmilhar + cmilhar;
             
-            if (p1 == p2){
-                printf("%d eh o maior palindromo feito a partir do produto de dois numeros de 3 digitos.", p1);
-                return 0;
+            if ((p1 == p2) && (p1 > mp)){
+                mp = p1;
+                mn1 = num1;
+                mn2 = num2;
             }
         }
     }
+
+    printf("%d*%d = %d que eh o maior palindromo formado a partir do produto de dois numeros de 3 digitos.", mn1, mn2, mp);
     
+    return 0;
 }
