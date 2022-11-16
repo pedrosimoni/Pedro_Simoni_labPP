@@ -15,7 +15,7 @@ int main()
                 scanf("%f", &n1);
                 printf("Digite o segundo numero da soma: ");
                 scanf("%f", &n2);
-                printf("\nRESULTADO%.2f + %.2f = %.2f\n\n", n1, n2, n1+n2);
+                printf("\nRESULTADO: %.2f + %.2f = %.2f\n\n", n1, n2, n1+n2);
                 break;    
             case 2:
                 printf("Digite o primeiro numero da subtracao: ");
